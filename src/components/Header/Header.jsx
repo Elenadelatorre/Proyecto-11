@@ -11,7 +11,7 @@ const Header = () => {
             <NavLink activeclassname='active' className='h1' to='/'>INFIFOOT</NavLink>
           </li>
           <li>
-            <NavLink activeclassname='active' to='/products'>PRODUCTS</NavLink>
+            <NavLink activeclassname='active' to='/countries'>COUNTRIES</NavLink>
           </li>
           <li>
             <NavLink  activeclassname='active' to='/users'>USERS</NavLink>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Products from './pages/Products/Products';
+import Countries from './pages/Countries/Countries';
 import Users from './pages/Users/Users';
-import ProductById from './pages/ProductById/ProductById';
-import PlayerById from './pages/UserById/UserById';
+import CountryById from './pages/CountryById/CountryById';
+import UserById from './pages/UserById/UserById';
 import NotFound from './pages/NotFound/NotFound';
 import './App.css';
 import Header from './components/Header/Header';
@@ -15,9 +15,9 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
+        <Route path='/countries' element={<Countries />} />
         <Route path='/users' element={<Users />} />
-        <Route path='/products/:id' element={<ProductById />} />
+        <Route path='/countries/:id' element={<CountryById />} />
         <Route path='/user/:id' element={<UserById />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

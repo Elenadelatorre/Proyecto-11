@@ -5,23 +5,36 @@ import { Link } from 'react-router-dom';
 const Users = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/users')
+    fetch('https://randomuser.me/api/?results=25')
       .then((response) => response.json())
-      .then((response) => setUsers(response));
+      .then((data) => setUsers(data.results));
   }, []);
   return (
-    <div className='teams'>
+    <div className='countries'>
       <div className='teams-cards'>
         {users.map((user) => (
-          <Link to={`/users/${user.id}`} className='team-card' key={user.id}>
+          <Link
+            to={`/user/${user.login.uuid}`}
+            className='team-card'
+            key={user.login.uuid}
+          >
             <img
-              className='team-logo'
-              src={user.avatar|| '/public/assets/default.png'}
-              onError={(e) => { e.target.onerror = null; e.target.src = '/public/assets/default.png'; }}
-              alt={user.name}
+              className='img'
+              src={user.picture.large}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/public/assets/default.png';
+              }}
+              alt={
+                user.name.first + user.name.last
+              }
             />
 
-            <h2 className='team-name'>{user.name}</h2>
+            <h2 className='name'>
+              {user.name.first + ' ' + user.name.last}
+            </h2>
+            <p ></p>
+            <p ></p>
           </Link>
         ))}
       </div>

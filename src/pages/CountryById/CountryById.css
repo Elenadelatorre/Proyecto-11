@@ -1,0 +1,39 @@
+.country-container {
+  
+  background-color: #fefefe;
+  margin-top: 50px;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-flag {
+  display: block;
+  margin: 0 auto 20px;
+  border: 0.2px solid black;
+  width: 100%;
+}
+
+.country-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 545;
+}
+
+.capital {
+  font-size: 19px;
+}
+.label {
+  font-weight: 600;
+}
