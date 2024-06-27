@@ -16,7 +16,7 @@ const CountryById = () => {
   }, []);
 
   return (
-    <div className='countries'>
+    <div className='country'>
       {country && (
         <div className='country-container'>
           <h2>{country[0].name.common}</h2>
@@ -38,6 +38,18 @@ const CountryById = () => {
             <p className='languages'>
               <span className='label'>Languages: </span>
               {country[0].languages ? Object.values(country[0].languages).join(', ') : 'N/A'}
+            </p>
+            <p className='population'>
+              <span className='label'>Población: </span>
+              {country[0].population? country[0].population : 'N/A'} 
+            </p>
+            <p>
+              <span className='label'>Ubicación 📍: </span>
+              {country[0].maps && country[0].maps.googleMaps ? (
+                <a href={country[0].maps.googleMaps} target="_blank" rel="noopener noreferrer">
+                  Ver en Google Maps
+                </a>
+              ) : 'N/A'}
             </p>
           </div>
         </div>
