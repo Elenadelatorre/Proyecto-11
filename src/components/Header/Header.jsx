@@ -11,10 +11,10 @@ const Header = () => {
             <NavLink activeclassname='active' className='h1' to='/'>CONOCE MUNDO🌍</NavLink>
           </li>
           <li>
-            <NavLink activeclassname='active' to='/countries'>PAÍSES</NavLink>
+            <NavLink activeclassname='active' to='/countries'>DESTINOS</NavLink>
           </li>
           <li>
-            <NavLink  activeclassname='active' to='/users'>USUARIOS</NavLink>
+            <NavLink  activeclassname='active' to='/users'>PARTICIPANTES</NavLink>
           </li>
         </ul>
       </nav>

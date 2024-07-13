@@ -8,6 +8,7 @@ import UserById from './pages/UserById/UserById';
 import NotFound from './pages/NotFound/NotFound';
 import './App.css';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/user/:id' element={<UserById />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

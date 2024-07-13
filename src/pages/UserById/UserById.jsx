@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 const UserById = () => {
   const { id } = useParams();
-
   const [user, setUser] = useState();
 
   useEffect(() => {
@@ -33,9 +32,9 @@ const UserById = () => {
               {user.email ? user.email : 'N/A'}
             </p>
             <div className='user-info'>
-            <p>
+              <p>
                 <span className='label'>Edad: </span>
-                {user.dob.age? user.dob.age : 'N/A'}
+                {user.dob.age ? user.dob.age : 'N/A'}
               </p>
               <p>
                 <span className='label'>País: </span>
@@ -47,13 +46,19 @@ const UserById = () => {
               </p>
               <p>
                 <span className='label'>Código postal: </span>
-                {user.location.postcode? user.location.postcode : 'N/A'}
+                {user.location.postcode ? user.location.postcode : 'N/A'}
               </p>
               <p>
                 <span className='label'>Nacionalidad: </span>
-                {user.nat? user.nat : 'N/A'}
+                {user.nat ? user.nat : 'N/A'}
               </p>
             </div>
+            <a
+              href={`mailto:${user.email}?subject=Contacto&body=Hola ${user.name.first},`}
+              className='contact-button'
+            >
+              Contactar
+            </a>
           </div>
         </div>
       )}
