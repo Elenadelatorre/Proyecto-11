@@ -8,7 +8,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink activeclassname='active' className='h1' to='/'>CONOCE MUNDO🌍</NavLink>
+            <NavLink activeclassname='active' className='h1' to='/'>CulturaViva🌍</NavLink>
           </li>
           <li>
             <NavLink activeclassname='active' to='/countries'>DESTINOS</NavLink>
